@@ -1,0 +1,14 @@
+
+<div class="stock-card-container" [ngClass]="{'negative-variation' : stock.variation <= 0}" >
+  <div class="stock-info-container">
+    <h2> {{ stock.name}}</h2>
+    <p>{{ stock.date }} </p>
+  </div>
+  <div class="stock-value-container">
+
+    <span class="value">{{ stock.price | currency: 'BRL'}}</span>
+    <span [ngClass]="{'negative-variation-background' : stock.variation <= 0,
+    'variation': stock.variation > 0  }" > {{  variation }}</span>
+
+  </div>
+</div>

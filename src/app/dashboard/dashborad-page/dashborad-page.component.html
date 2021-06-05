@@ -1,0 +1,16 @@
+
+
+
+<div class="container">
+
+  <div class="option">
+    <ul class="option-method" >
+      <a href="#" (click)="getAllStocks()"><li class="option-btn">All Stock</li></a>
+      <a href="#" (click)="getTodayStocks()"><li class="option-btn">Today Stock </li></a>
+      <a  [routerLink]="['/stock-post']" routerLinkActive="router-link-active"  ><li class="option-btn">Post Stock</li></a>
+    </ul>
+  </div>
+
+
+  <app-stock-card *ngFor="let stock of stocks" [stock]="stock"></app-stock-card>
+</div>

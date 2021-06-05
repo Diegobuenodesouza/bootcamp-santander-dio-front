@@ -1,0 +1,27 @@
+<div class="post-stock">
+  <h1 class="post-stock-title">Create Stock</h1>
+  <form class="post-stock-form" [formGroup]="formulario">
+
+    <div class="post-stock-field">
+      <label class="post-stock-label">Name:</label>
+      <input type="text" class="post-stock-input" formControlName="name">
+    </div>
+
+    <div class="post-stock-field">
+      <label class="post-stock-label">Price:</label>
+      <input type="number" class="post-stock-input" formControlName="price">
+    </div>
+
+    <div class="post-stock-field">
+      <label class="post-stock-label">Variation:</label>
+      <input type="number" class="post-stock-input" formControlName="variation">
+    </div>
+
+    <div class="post-stock-field div-btn" >
+      <button class="btn btn-voltar"  [routerLink]="['/']">Voltar</button>
+      <button class="btn btn-salvar" [disabled]="!formulario.valid" (click)="salvar()">Save</button>
+    </div>
+
+
+  </form>
+</div>
